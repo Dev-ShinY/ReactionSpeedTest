@@ -38,8 +38,8 @@ export default function Main() {
             </p>
             <Menus>
                 {
-                    MenuList.map( item => (
-                        <Link to={item.route}>
+                    MenuList.map( (item, index) => (
+                        <Link to={item.route} key={ index }>
                             <Menu>
                                 <MenuTitle>
                                     { item.title }
