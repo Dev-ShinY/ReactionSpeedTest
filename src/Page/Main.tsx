@@ -26,7 +26,16 @@ export default function Main() {
     ]
     
     return (
-        <Container> 
+        <Container>
+            <MainTitle>
+                <p>
+                    반응 속도 체크: 반체커
+                </p>
+                    당신의 반응 속도를 체크합니다.
+            </MainTitle>
+            <p style={{ width: '90%'}}>
+                <b>Menus</b>
+            </p>
             <Menus>
                 {
                     MenuList.map( item => (
@@ -54,28 +63,46 @@ const Container = styled.div`
     width: 100%;
 `;
 
+const MainTitle = styled.div`
+    margin: 50px 0 20px;
+    padding: 30px 20px;
+    width: 90%;
+    background-color: #eee;
+    border-radius: 10px;
+    p {
+        font-size: 1.5rem;
+        border-bottom: 1px solid #ddd
+    }
+`
+
 const Menus = styled.div`
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 `;
 
 const Menu = styled.div`
     padding: 20px;
-    margin: 30px 20px;
+    margin: 0px 0px 20px;
     width: 300px;
-    height: 100px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background-color: #eee;
+    height: 150px;
+    border: 1px solid #394057;
+    box-shadow: #394057 1.95px 1.95px 2.6px;
+    background-color: #fff;
     color: #333;
     border-radius: 10px;
     cursor: pointer;
     &:hover {
-        background-color: #ddd;
+        background-color: #eee;
         color: #111;
     }
 `;
 
-const MenuTitle =styled.h3``;
+const MenuTitle =styled.h3`
+    font-weight: 800;
+`;
 
-const MenuSubTitle = styled.h4``;
+const MenuSubTitle = styled.h4`
+    font-weight: 500;
+`;
